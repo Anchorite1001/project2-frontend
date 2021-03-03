@@ -40,7 +40,7 @@ class EventList extends Component {
             {event.restaurant && <h6>Venue: <strong>{event.restaurant.name}</strong></h6>}
             {event.introduction && <p>Introduction: {event.introduction}</p>}
             {event.date && <p>Date: {event.date}</p>}
-            <button><Link to={`/project2-frontend/event/${event.id}`}>Show event</Link></button>
+            <button><Link to={`/event/${event.id}`}>Show event</Link></button>
           </div>
           </Card>
         )}

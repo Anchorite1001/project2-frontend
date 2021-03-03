@@ -56,7 +56,7 @@ class EventCreateForm extends Component {
     axios.post(SERVER_URL, newEvent).then((response) => {
       console.log(response);
       this.addAttendants(attendants, newEvent);
-      this.props.history.push(`/project2-frontend/events`)
+      this.props.history.push(`/events`)
     })
   }
 

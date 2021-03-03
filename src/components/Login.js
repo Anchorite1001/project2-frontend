@@ -48,7 +48,7 @@ class Login extends Component {
   };
 
   redirect = () => {
-    this.props.history.push('/project2-frontend')
+    this.props.history.push('/')
   }
 
   handleErrors = () => {

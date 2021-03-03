@@ -86,7 +86,7 @@ class EventShowPage extends Component {
     let EVENT_URL = GET_EVENT_URL(this.state.id);
     axios.delete(EVENT_URL, {params: {id: this.state.id}}).then((response) => {
       console.log(response);
-      this.props.history.push('/project2-frontend/events')
+      this.props.history.push('/events')
     })
   }
 
