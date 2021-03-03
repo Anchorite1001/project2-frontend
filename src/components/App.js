@@ -31,7 +31,7 @@ function Logout(props) {
       axios.delete('https://agile-tor-91190.herokuapp.com/logout', {withCredentials: true})
       .then(response => {
         props.handleLogout()
-        props.history.push('/project2-frontend')
+        props.history.push('/')
       })
     .catch(error => console.log(error))
   }
