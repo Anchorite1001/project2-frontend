@@ -38,7 +38,8 @@ class Signup extends Component {
     //double check your Rails server port, mine is 3000 & React is on 3001
     axios.post(SERVER_URL, { user }, { withCredentials: true }).then(response => {
       if (response.data.status === 'created') {
-        this.props.handleLogin(response.data)
+        localStorage.setItem('user', response.data.user)
+        this.props.handleLogin(localStorage.getItem('user'))
         this.redirect()
       } else {
         console.log(response.data.errors);
