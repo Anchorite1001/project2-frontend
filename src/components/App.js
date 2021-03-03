@@ -91,17 +91,17 @@ class App extends Component {
             <MyNavBar {...this.state} isLoggedIn={this.state.isLoggedIn}/>
             <Switch>
 
-              <Route exact path='/project2-frontend/' component={(props) => <Home {...props} {...this.state} isLoggedIn={this.state.isLoggedIn}/> } />
-              <Route exact path='/project2-frontend/login' component={(props) => <Login {...props} handleLogin={this.handleLogin}/> } />
-              <Route exact path='/project2-frontend/signup' component={(props) => <Signup {...props} handleLogin={this.handleLogin} /> } />
-              <Route exact path='/project2-frontend/logout' component={(props) => <Logout {...props} onClick={this.handleClick} handleLogout={this.handleLogout}/> } />
+              <Route exact path='/' component={(props) => <Home {...props} {...this.state} isLoggedIn={this.state.isLoggedIn}/> } />
+              <Route exact path='/login' component={(props) => <Login {...props} handleLogin={this.handleLogin}/> } />
+              <Route exact path='/signup' component={(props) => <Signup {...props} handleLogin={this.handleLogin} /> } />
+              <Route exact path='/logout' component={(props) => <Logout {...props} onClick={this.handleClick} handleLogout={this.handleLogout}/> } />
 
-              <Route exact path='/project2-frontend/event/:id' component = {(props) => <EventShow {...props} {...this.state} />} />
+              <Route exact path='/event/:id' component = {(props) => <EventShow {...props} {...this.state} />} />
 
-              <Route exact path='/project2-frontend/restaurant/:id' component={ShowRestaurant} />
-              <Route exact path='/project2-frontend/wishlist' component={(props) => <Wishlist {...props} {...this.state} />} />
-              <Route exact path='/project2-frontend/events' component={(props) => <EventList {...props} {...this.state} />} />
-              <Route exact path='/project2-frontend/restaurant/:id/create-event' component={(props) => <EventCreate {...props} {...this.state} />} />
+              <Route exact path='/restaurant/:id' component={ShowRestaurant} />
+              <Route exact path='/wishlist' component={(props) => <Wishlist {...props} {...this.state} />} />
+              <Route exact path='/events' component={(props) => <EventList {...props} {...this.state} />} />
+              <Route exact path='/restaurant/:id/create-event' component={(props) => <EventCreate {...props} {...this.state} />} />
             </Switch>
           </HashRouter>
         </Container>
