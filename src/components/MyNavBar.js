@@ -14,7 +14,7 @@ const MyNavBar = (props) => {
   return (
     <Navbar sticky="top"  bg="dark" variant="dark">
       <Navbar.Brand>
-        <Link to="/project2-frontend">
+        <Link to="/">
           <IoFastFoodOutline /> Home
         </Link>
 
@@ -23,20 +23,20 @@ const MyNavBar = (props) => {
       {props.isLoggedIn &&
         <span>
           <Navbar.Brand>
-            <Link to="/project2-frontend/wishlist">
+            <Link to="/wishlist">
               Your List
             </Link>
           </Navbar.Brand>
 
           <Navbar.Brand>
-           <Link to="/project2-frontend/events" >
+           <Link to="/events" >
               Your Events
             </Link>
           </Navbar.Brand>
 
           {props.user &&
             <Navbar.Brand>
-              <Link to="/project2-frontend/logout" >
+              <Link to="/logout" >
                 Log Out {props.user.name}
               </Link>
             </Navbar.Brand>
@@ -48,13 +48,13 @@ const MyNavBar = (props) => {
       {!props.isLoggedIn &&
         <span>
           <Navbar.Brand>
-            <Link to="/project2-frontend/login">
+            <Link to="/login">
               Log In
             </Link>
           </Navbar.Brand>
 
           <Navbar.Brand>
-            <Link to="/project2-frontend/signup" >
+            <Link to="/signup" >
               Sign Up
             </Link>
           </Navbar.Brand>
