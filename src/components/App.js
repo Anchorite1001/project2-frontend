@@ -46,7 +46,7 @@ class App extends Component {
     super(props);
     this.state = {
       isLoggedIn: true,
-      user: localStorage.getItem('user')? localStorage.getItem('user') : {},
+      user: {},
     };
   }
   componentDidMount() {
@@ -58,8 +58,7 @@ class App extends Component {
     axios.get(SERVER_URL, {withCredentials: true})
     .then(response => {
       if (response.data.logged_in) {
-        localStorage.setItem('user', response.data.user)
-        this.handleLogin(localStorage.getItem('user'))
+        this.handleLogin(response)
       } else {
         console.log('loginStatus();');
         this.handleLogout()
@@ -68,10 +67,10 @@ class App extends Component {
     .catch(error => console.log('api errors:', error))
   }
 
-  handleLogin = (user) => {
+  handleLogin = (response) => {
     this.setState({
       isLoggedIn: true,
-      user: user
+      user: response.data.user
     })
   }
 
