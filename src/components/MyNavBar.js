@@ -5,45 +5,58 @@ import { IoFastFoodOutline } from "react-icons/io5";
 import axios from 'axios';
 
 
-const SERVER_URL = 'http://localhost:3000/' + 'logout';
+
+
+const SERVER_URL = 'https://agile-tor-91190.herokuapp.com/' + 'logout';
 
 const MyNavBar = (props) => {
-  const handleClick = () => {
-    axios.delete(SERVER_URL, {withCredentials: true}).then(response => {
-      props.history.push('/')
-    })
-    .catch(error => console.log(error))
-  }
 
   return (
     <Navbar sticky="top"  bg="dark" variant="dark">
-      <Navbar.Brand href="/">
-        <IoFastFoodOutline /> Home
+      <Navbar.Brand>
+        <Link to="/">
+          <IoFastFoodOutline /> Home
+        </Link>
+
       </Navbar.Brand>
 
       {props.isLoggedIn &&
         <span>
-          <Navbar.Brand href="/wishlist">
-            Your List
+          <Navbar.Brand>
+            <Link to="/wishlist">
+              Your List
+            </Link>
           </Navbar.Brand>
 
-          <Navbar.Brand href="/events">
-            Your Events
+          <Navbar.Brand>
+           <Link to="/events" >
+              Your Events
+            </Link>
           </Navbar.Brand>
 
-          <Link to="/logout" onClick={handleClick}>
-            Log Out
-          </Link>
+          {props.user &&
+            <Navbar.Brand>
+              <Link to="/logout" >
+                Log Out {props.user.name}
+              </Link>
+            </Navbar.Brand>
+          }
+
+
         </span>
       }
       {!props.isLoggedIn &&
         <span>
-          <Navbar.Brand href="/login">
-            Log In
+          <Navbar.Brand>
+            <Link to="/login">
+              Log In
+            </Link>
           </Navbar.Brand>
 
-          <Navbar.Brand href="/signup">
-            Sign Up
+          <Navbar.Brand>
+            <Link to="/signup" >
+              Sign Up
+            </Link>
           </Navbar.Brand>
         </span>}
 
