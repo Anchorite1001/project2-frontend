@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Project Two
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+>## I feel like
 
-## Available Scripts
+You know how sometimes when you are hungry, you just don't know where you want to go to eat? Or when there is a team lunch at work, and you want to try something new?
 
-In the project directory, you can run:
+I feel like sets out to try and help you with that problem by leveraging a random search of places in your rough area using the Google Places API.
+Once you find a place you are interested in , you are able to save the location to a wishlist & to also create an event at the location.
 
-### `npm start`
+The site has a registered User model to allow the creation of user wishlists, storing of places to the wishlist and to create events at a place.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Background
+This project was completed during a General Assembly Software Engineering Immersive course.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+##Built with
+* React
+* Ruby on Rails 5.2.2.4
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+###Project dependancies - Client
+- axios ^0.21.1
+- bootstrap ^4.6.0
+- react ^17.0.1
+- react-bootstrap ^1.5.0
+- react-dom ^17.0.1
+- react-icons ^4.2.0
+- react-router ^5.2.0
+- react-router-dom ^5.2.0
+- gh-pages ^3.1.0"
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Project homepage: https://anchorite1001.github.io/project2-frontend/
+- Front-end repository: https://github.com/Anchorite1001/project2-frontend
+  - Issue Tracker: https://github.com/Anchorite1001/project2-frontend/issues
+- Back-end repository: https://github.com/plantdink/ubiquitous-robot
+  - Issue Tracker: https://github.com/plantdink/ubiquitous-robot/issues
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##Licensing
+The code in this project is licensed under MIT license. https://opensource.org/
